@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>CucumberAutomation</td>
+              <td>1</td>
+            <td>05 Aug 2024, 18:01</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">com.automation.steps.Hooks.setUp()</td>
+              <td>4</td>
+              <td class="duration" data-value="588899200">588ms</td>
+              <td class="duration" data-value="147224800">147ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.RequestSteps.setRequestBodyFromTheFileAndUpdateUsingPojo(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1202500">001ms</td>
+              <td class="duration" data-value="1202500">001ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.RequestSteps.set_header_to(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="86349700">086ms</td>
+              <td class="duration" data-value="43174850">043ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.RequestSteps.set_request_body_from_the_file(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="4988500">004ms</td>
+              <td class="duration" data-value="4988500">004ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.RequestSteps.userPerformsTheDeleteCall()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.RequestSteps.userPerformsTheGetCall()</td>
+              <td>1</td>
+              <td class="duration" data-value="998000">000ms</td>
+              <td class="duration" data-value="998000">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.RequestSteps.userPerformsThePutCall()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.RequestSteps.user_performs_the_post_call()</td>
+              <td>1</td>
+              <td class="duration" data-value="27679224100">27s 679ms</td>
+              <td class="duration" data-value="27679224100">27s 679ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.RequestSteps.user_wants_to_call_endpoint(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="209456300">209ms</td>
+              <td class="duration" data-value="52364075">052ms</td>
+              <td class="failed">25.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.ResponseSteps.stores_the_id_into(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2847300">002ms</td>
+              <td class="duration" data-value="2847300">002ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.ResponseSteps.verify_the_booking_id_is_not_empty()</td>
+              <td>1</td>
+              <td class="duration" data-value="1288532700">1s 288ms</td>
+              <td class="duration" data-value="1288532700">1s 288ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.ResponseSteps.verify_the_status_code_is(java.lang.Integer)</td>
+              <td>4</td>
+              <td class="duration" data-value="7958600">007ms</td>
+              <td class="duration" data-value="1989650">001ms</td>
+              <td class="failed">25.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>12</td>
+            <td>22</td>
+            <td class="duration">29s 870ms</td>
+            <td class="duration">1s 357ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
